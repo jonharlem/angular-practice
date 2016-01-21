@@ -4,9 +4,29 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 </head>
-<body ng-controller="HelloController">
-	<h2>Hello, {{hello.title}}!</h2>
-	<input type="text" ng-model="hello.title">
-	<button ng-click="printTitle()">Print to console</button>
+<body >
+	<div ng-controller="HelloController">
+		<h2>Hello, {{hello.title}}!</h2>
+		<input type="text" ng-model="hello.title">
+		<button ng-click="printTitle()">Print to console</button>
+	</div>
+	<p>Add Two Numbers</p>
+	<p><input type="number" ng-model="add1">
+	 + <input type="number" ng-model="add2"> = {{add1 + add2}}</p>
+	<p>First Name and Last Name</p>
+	 <p><input type="text" ng-model="first"> and <input type="text" ng-model="last"> = {{first + " " + last}}</p>
+	<p>Practice Using Filters</p>
+	{{3.14159265359}}
+	<br>
+	{{3.14159265359 | currency}}
+	<br>
+	{{3.14159265359 | currency:"&euro;" }}
+	<div ng-model="HelloController">
+		<p>Display Text In Lowercase and Uppercase</p>
+		<input type="text" ng-model="yellOrWhisper">
+		<p>YELLING: {{yellOrWhisper | uppercase}}</p>
+		<p>whispering: {{yellOrWhisper | lowercase}}</p>
+	</div>
+
 </body>
 </html>

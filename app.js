@@ -7,5 +7,8 @@ application.controller("HelloController",
 
 		$scope.printTitle = function() {
 			console.log($scope.hello.title);
-		}
+		};
+
+		$scope.yellOrWhipser = {};
 });
+
