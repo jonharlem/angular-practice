@@ -20,7 +20,7 @@ app.controller('roundPi', function($scope) {
 });
 
 app.controller('tipCalc', function($scope) {
-	// $scope.meal = {};
+	$scope.meal = {};
 	$scope.percents = [{
 		string: '10%',
 		number: 0.1
