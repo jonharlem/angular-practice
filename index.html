@@ -35,9 +35,7 @@
 	<div ng-controller="roundPi">
 		<h2>How many digits of Pi do you want?</h2>
 		<p>
-			<select ng-model="pi.digits" ng-init="pi.digits = digits[0]" ng-options="digit for digit in digits">
-					<!-- {{digit}} -->
-			</select>
+			<select ng-model="pi.digits" ng-init="pi.digits = digits[0]" ng-options="digit for digit in digits"></select>
 		</p>
 		<p>
 				<ng-pluralize 
@@ -51,6 +49,14 @@
 		<p>
 			{{3.14159265359 | number:pi.digits}}
 		</p>
+	</div>
+
+	<div ng-controller="tipCalc">
+		<h2>Super Useful Tip Calculator</h2>
+		<p>How much did your meal cost? <input type="number" ng-model="tip.meal"></p>
+		<p>How much do you want to tip? <select ng-model="selectedTip" " ng-options="item.string for item in percents"></select> </p>
+		<h3>Tip: {{ tip.meal* (selectedTip.number) | currency}}</h3>
+		<h3>Subtotal: {{tip.meal | currency}}</h3>
 	</div>
 
 </body>

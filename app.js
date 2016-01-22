@@ -19,3 +19,13 @@ app.controller('roundPi', function($scope){
 	$scope.pi = {};
 	}
 );
+
+app.controller('tipCalc', function($scope){
+		$scope.meal = {};
+		$scope.percents = [
+			{string: '10%', number: 0.1},
+			{string: '15%', number: 0.15},
+			{string: '20%', number: 0.2}
+		];
+		$scope.selectedTip = $scope.percents[0];
+});
