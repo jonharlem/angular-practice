@@ -1,63 +1,76 @@
-
 <html ng-app='myApp'>
-<head>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
-	<script type="text/javascript" src="app.js"></script>
-</head>
-<body >
-	<div ng-controller="HelloController">
-		<h2>Hello, {{hello.title}}!</h2>
-		<input type="text" ng-model="hello.title">
-		<button ng-click="printTitle()">Print to console</button>
-	</div>
-	<p>Add Two Numbers</p>
-	<p><input type="number" ng-model="add1">
-	 + <input type="number" ng-model="add2"> = {{add1 + add2}}</p>
-	<p>First Name and Last Name</p>
-	 <p><input type="text" ng-model="first"> and <input type="text" ng-model="last"> = {{first + " " + last}}</p>
-	<h2>Practice Using Filters</h2>
-	{{3.14159265359}}
-	<br>
-	{{3.14159265359 | number:6}}
-	<br>
-	{{3.14159265359 | number:3}}
-	<br>
-	{{3.14159265359 | currency}}
-	<br>
-	{{3.14159265359 | currency:"&euro;" }}
-	<div ng-model="yellWhisper">
-		<p>Display Text In Lowercase and Uppercase</p>
-		<input type="text" ng-model="yellOrWhisper">
-		<p>YELLING: {{yellOrWhisper | uppercase}}</p>
-		<p>whispering: {{yellOrWhisper | lowercase}}</p>
-	</div>
-
-	<div ng-controller="roundPi">
-		<h2>How many digits of Pi do you want?</h2>
-		<p>
+	<head>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</head>
+	<body >
+		<div ng-controller="HelloController">
+			<h2>Hello, {{hello.title}}!</h2>
+			<input type="text" ng-model="hello.title">
+			<button ng-click="printTitle()">Print to console</button>
+		</div>
+		<p>Add Two Numbers</p>
+		<p><input type="number" ng-model="add1">
+		+ <input type="number" ng-model="add2"> = {{add1 + add2}}</p>
+		<p>First Name and Last Name</p>
+		<p><input type="text" ng-model="first"> and <input type="text" ng-model="last"> = {{first + " " + last}}</p>
+		<h2>Practice Using Filters</h2>
+		{{3.14159265359}}
+		<br>
+		{{3.14159265359 | number:6}}
+		<br>
+		{{3.14159265359 | number:3}}
+		<br>
+		{{3.14159265359 | currency}}
+		<br>
+		{{3.14159265359 | currency:"&euro;" }}
+		<div ng-model="yellWhisper">
+			<p>Display Text In Lowercase and Uppercase</p>
+			<input type="text" ng-model="yellOrWhisper">
+			<p>YELLING: {{yellOrWhisper | uppercase}}</p>
+			<p>whispering: {{yellOrWhisper | lowercase}}</p>
+		</div>
+		<div ng-controller="roundPi">
+			<h2>How many digits of Pi do you want?</h2>
+			<p>
 			<select ng-model="pi.digits" ng-init="pi.digits = digits[0]" ng-options="digit for digit in digits"></select>
 		</p>
 		<p>
-				<ng-pluralize 
-					count="pi.digits"
-					when="{
-						1: 'Here you go! The first {{pi.digits}} digit of pi!',
-						other: 'Here you go! The first {{pi.digits}} digits of pi!'
-					}"
-				>
+			<ng-pluralize
+			count="pi.digits"
+			when="{
+			1: 'Here you go! The first {{pi.digits}} digit of pi!',
+			other: 'Here you go! The first {{pi.digits}} digits of pi!'
+			}"
+			>
 		</p>
 		<p>
 			{{3.14159265359 | number:pi.digits}}
 		</p>
 	</div>
-
 	<div ng-controller="tipCalc">
 		<h2>Super Useful Tip Calculator</h2>
 		<p>How much did your meal cost? <input type="number" ng-model="tip.meal"></p>
-		<p>How much do you want to tip? <select ng-model="selectedTip" " ng-options="item.string for item in percents"></select> </p>
+		<p>How much do you want to tip? <select ng-model="selectedTip"  ng-options="item.string for item in percents"></select> </p>
 		<h3>Tip: {{ tip.meal* (selectedTip.number) | currency}}</h3>
 		<h3>Subtotal: {{tip.meal | currency}}</h3>
 	</div>
-
+	<div ng-controller="madLibs">
+		<h2>MadLibs</h2>
+		<p>Boy's Name</p>
+		<input placeholder="Enter a boy's name..." ng-model="nameInput">
+		<p>Adjective</p>
+		<input placeholder="Enter an Adjective" ng-model="adjInput">
+		<p>Plural Noun</p>
+		<input placeholder="Enter a Plural Noun" ng-model="nounInput1">
+		<p>Plural Noun</p>
+		<input placeholder="Enter a Plural Noun" ng-model="nameInput2">
+		<p>An Insect, Plural</p>
+		<input placeholder="Enter an Insect, Plural" ng-model="insectInput">
+		<p>Plural Noun</p>
+		<input placeholder="Enter a Plural Noun" ng-model="pluralInput3">
+		<p>Verb Ending in "s"</p>
+		<input placeholder="Enter a Verb Ending in s\" ng-model="sEndingInput">
+	</div>
 </body>
 </html>
