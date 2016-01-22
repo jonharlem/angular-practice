@@ -62,15 +62,18 @@
 		<p>Adjective</p>
 		<input placeholder="Enter an Adjective" ng-model="adjInput">
 		<p>Plural Noun</p>
-		<input placeholder="Enter a Plural Noun" ng-model="nounInput1">
+		<input placeholder="Enter a Plural Noun" ng-model="pluralInput1">
 		<p>Plural Noun</p>
-		<input placeholder="Enter a Plural Noun" ng-model="nameInput2">
+		<input placeholder="Enter a Plural Noun" ng-model="pluralInput2">
 		<p>An Insect, Plural</p>
 		<input placeholder="Enter an Insect, Plural" ng-model="insectInput">
 		<p>Plural Noun</p>
 		<input placeholder="Enter a Plural Noun" ng-model="pluralInput3">
 		<p>Verb Ending in "s"</p>
 		<input placeholder="Enter a Verb Ending in s\" ng-model="sEndingInput">
+		<br>
+		<button ng-click="generate()">GENERATE</button>
+		<h3>I'm in love with <span>{{nameInput}}</span>. He's so <span>{{adjInput}}</span>! He has big flat <span>{{pluralInput1}}</span>, and when our <span>{{pluralInput2}}</span> meet, I get <span>{{insectInput}}</span> in my stomach. I've fallen for him like a ton of <span>{{pluralInput3}}</span>, and he <span>{{sEndingInput}}</span> for me, too. But I think he's got another girlfriend. What should I do?</h3>
 	</div>
 </body>
 </html>

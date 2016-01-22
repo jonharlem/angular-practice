@@ -20,7 +20,7 @@ app.controller('roundPi', function($scope) {
 });
 
 app.controller('tipCalc', function($scope) {
-	$scope.meal = {};
+	// $scope.meal = {};
 	$scope.percents = [{
 		string: '10%',
 		number: 0.1
@@ -35,5 +35,14 @@ app.controller('tipCalc', function($scope) {
 });
 
 app.controller('madLibs', function(){
-	
-})
+	// $scope.generate = function () {
+		
+	// }
+	// $scope.nameInput = {};
+	// $scope.adjInput = {};
+	// $scope.pluralInput1 = {};
+	// $scope.pluralInput2 = {};
+	// $scope.pluralInput3 = {};
+	// $scope.insectInput = {};
+	// $scope.sEndingInput= {};
+});
